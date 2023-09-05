@@ -9,6 +9,7 @@ const db = new Sequelize({
   port: process.env.DB_PORT, // el puerto de conexión a tu base de datos (puede ser igual 5433)
   password: process.env.DB_PASSWORD, // la contraseña del usuario en postgres
   dialect: "postgres", // el dialecto de la base de datos que estamos usando
+  dialectOptions: {ssl: {required: true, rejectUnauthorized: false}}
 });
 
 // finalmente exportamos la instancia hecha en la variable db
