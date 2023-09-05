@@ -10,12 +10,12 @@ const Task = db.define("task", {
   },
 
   title: {
-    type: DataTypes.STRING(50),
+    type: DataTypes.STRING(250),
     allowNull: false,
   },
 
   description: {
-    type: DataTypes.STRING(500),
+    type: DataTypes.STRING,
   },
 
   isCompleted: {

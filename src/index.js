@@ -1,12 +1,16 @@
 import express from 'express';
 import db from './utils/database.js';
+import cors from 'cors';
 import Task from './models/task.model.js';
+import 'dotenv/config';
 
 Task;
 
 const app = express();
 app.use(express.json());
-const PORT = 8000;
+app.use(cors());
+
+const PORT = process.env.PORT ?? 8080;
 
 db.authenticate()
   .then(() => console.log('Autenticado con exito'))
