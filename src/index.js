@@ -6,7 +6,7 @@ Task;
 
 const app = express();
 app.use(express.json());
-const PORT = process.env.PORT ?? 8000;
+const PORT = 8000;
 
 db.authenticate()
   .then(() => console.log('Autenticado con exito'))
